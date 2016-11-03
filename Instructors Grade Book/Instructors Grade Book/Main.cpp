@@ -23,6 +23,8 @@ int main() {
 	int numFinalExams = 0;
 	int weightPercentFinalExams = 0;
 
+	//Comment
+
 	cout << "***********************************" << endl;
 	cout << "Instructors Grade Book" << endl;
 	cout << "***********************************" << endl;
