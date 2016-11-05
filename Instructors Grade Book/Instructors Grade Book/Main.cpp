@@ -65,14 +65,14 @@ int main() {
 
 void addStudent()
 {
-	string studentNames;
-	int studentNumbers = 0;
+	string StudentNames;
+	int StudentNumbers = 0;
 
-	cout << "What  is the name of the student (last name, first name)" << endl;
-	cin >> studentNames;
+	cout << "What  is the name of the Student (last name, first name)" << endl;
+	cin >> StudentNames;
 
-	cout << "What is the student number(1-9999)" << endl;
-	cin >> studentNumbers;
+	cout << "What is the Student number(1-9999)" << endl;
+	cin >> StudentNumbers;
 }
 
 void menuOptions()
@@ -82,10 +82,10 @@ void menuOptions()
 	cout << "What would you like to do?" << endl;
 	cout << "***********************************" << endl;
 	cout << "A(Add Student)" << endl;
-	cout << "P(Record programming assignment grade for students)" << endl;
-	cout << "T(Record test grade for students)" << endl;
-	cout << "F(Record Final exam grade for students)" << endl;
-	cout << "C(Change a grade for a particular student)" << endl;
+	cout << "P(Record programming assignment grade for Students)" << endl;
+	cout << "T(Record test grade for Students)" << endl;
+	cout << "F(Record Final exam grade for Students)" << endl;
+	cout << "C(Change a grade for a particular Student)" << endl;
 	cout << "G(Calculate final grade)" << endl;
 	cout << "O(Output the grade data)" << endl;
 	//hacer funcion para saber en que orden se va imprimir
