@@ -1,5 +1,14 @@
 #pragma once
-#include "StudentType.h"
+#include "studentType.h" 
+// File ItemType.h must be provided by the user of this class. 
+//  ItemType.h must contain the following definitions: 
+//  MAX_ITEMS:     the maximum number of items on the list 
+//  ItemType:      the definition of the objects on the list 
+//  RelationType:  {LESS, GREATER, EQUAL}
+//  Member function ComparedTo(ItemType item) which returns 
+//       LESS, if self "comes before" item 
+//       GREATER, if self "comes after" item 
+//       EQUAL, if self and item are the same 
 struct NodeType;
 
 class UnsortedType
@@ -22,29 +31,29 @@ public:
 	// Pre:  List has been initialized.
 	// Post: Function value = number of elements in list
 
-	StudentType GetStudent(StudentType& Student, bool& found);
-	// Function: Retrieves list element whose key matches Student's key (if
+	/*StudentType GetStudent(StudentType& item, bool& found);*/
+	// Function: Retrieves list element whose key matches item's key (if
 	//           present).
 	// Pre:  List has been initialized.
-	//       Key member of Student is initialized.
-	// Post: If there is an element someStudent whose key matches
-	//       Student's key, then found = true and someStudent is returned;	
-	// 	 otherwise found = false and Student is returned.
+	//       Key member of item is initialized.
+	// Post: If there is an element someItem whose key matches
+	//       item's key, then found = true and someItem is returned;	
+	// 	 otherwise found = false and item is returned.
 	//       List is unchanged.
 
-	void PutStudent(StudentType Student);
-	// Function: Adds Student to list.
+	void PutStudent(StudentType item);
+	// Function: Adds item to list.
 	// Pre:  List has been initialized.
 	//       List is not full.
-	//       Student is not in list.
-	// Post: Student is in list.
+	//       item is not in list.
+	// Post: item is in list.
 
-	void DeleteStudent(StudentType Student);
-	// Function: Deletes the element whose key matches Student's key.
+	/*void DeleteStudent(StudentType item);*/
+	// Function: Deletes the element whose key matches item's key.
 	// Pre:  List has been initialized.
-	//       Key member of Student is initialized.
-	//       One and only one element in list has a key matching Student's key.
-	// Post: No element in list has a key matching Student's key.
+	//       Key member of item is initialized.
+	//       One and only one element in list has a key matching item's key.
+	// Post: No element in list has a key matching item's key.
 
 	void ResetList();
 	// Function: Initializes current position for an iteration through the list.
@@ -58,13 +67,10 @@ public:
 	//       Element at current position is not last in list.
 	//	     
 	// Post: Current position is updated to next position.
-	//       Student is a copy of element at current position.
+	//       item is a copy of element at current position.
 
 private:
 	NodeType* listData;
 	int length;
 	NodeType* currentPos;
 };
-
-
-

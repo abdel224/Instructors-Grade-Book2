@@ -6,7 +6,7 @@
 StudentType::StudentType()
 {
 	//intializing to zero in default constructor
-	int newStudentNumberc= 0;
+	int newStudentNumber = 0;
 }
 
 StudentType::StudentType(string firstName, string lastName, int StudentNumber)

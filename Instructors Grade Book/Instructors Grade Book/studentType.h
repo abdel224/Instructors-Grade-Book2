@@ -1,10 +1,13 @@
 // The following declarations and definitions go into file 
-// StudentType.h. 
-#include <iostream>
+// ItemType.h. 
 #include <fstream>
+#include <iostream>
 #include <string>
 
 using namespace std;
+
+const int MAX_ITEMS = 5;
+enum RelationType { LESS, GREATER, EQUAL };
 
 class StudentType
 {
@@ -15,7 +18,7 @@ public:
 	//overload constructor
 	StudentType(string, string, int);
 
-	//destructor
+	//Destructor
 	~StudentType();
 
 	//Accessor Functions
@@ -27,11 +30,13 @@ public:
 	void setFirstName(string);
 	void setLastName(string);
 	void setStudentNumber(int);
-	
+
 private:
-	//member variables
+	//Member Variables
 	string newFirstName;
 	string newLastName;
 	int newStudentNumber;
 
 };
+
+
