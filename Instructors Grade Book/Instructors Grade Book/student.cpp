@@ -11,6 +11,8 @@ Student::Student()
 	gradeProgrammingPercent = 0;
 	gradeTestPercent = 0;
 	gradeFinalTestPercent = 0;
+	finalProgrammingGrade = 0;
+	finalTestGrade = 0;
 
 }
 
@@ -35,11 +37,24 @@ void Student::setStudent()
 
 }
 
-void Student::studentGrades(float gradeProgrammingPercent, float gradeTestPercent, float gradeFinalTestPercent)
+void Student::studentGrades()
 {
+	cout << "Enter Student Programing Grade Percent(Example 80%):  ";
+	cin >> gradeProgrammingPercent;
+	cout << "Enter Student Test Grade Percent(Example 80%):  ";
+	cin >> gradeTestPercent;
+	cout << "Enter Student Final Grade Percent(Example 80%):  ";
+	cin >> gradeFinalTestPercent;
+
 	this->gradeProgrammingPercent = gradeProgrammingPercent;
 	this->gradeTestPercent = gradeTestPercent;
 	this->gradeFinalTestPercent = gradeFinalTestPercent;
+}
+
+void Student::computeStudentGrade()
+{
+	finalProgrammingGrade = gradeProgrammingPercent * 2;
+	finalTestGrade = gradeTestPercent * 2;
 }
 
 void Student::printStudentRecord()
