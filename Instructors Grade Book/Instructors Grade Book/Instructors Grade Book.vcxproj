@@ -150,6 +150,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="openFile.cpp" />
     <ClCompile Include="Semester.cpp" />
     <ClCompile Include="student.cpp" />
     <ClCompile Include="studentinfo.cpp" />
@@ -159,6 +160,7 @@
     <ClCompile Include="unsortedType.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="openFile.h" />
     <ClInclude Include="Semester.h" />
     <ClInclude Include="student.h" />
     <ClInclude Include="studentinfo.h" />
