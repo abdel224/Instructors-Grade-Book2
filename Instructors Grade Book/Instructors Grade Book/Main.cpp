@@ -240,5 +240,84 @@ void semesterContent()
 
 }
 
+#include <iostream>
+#include <string>
+#include <fstream>
+#include "mainMenu.h";
+using namespace std;
+
+int main2() {
+	mainMenu menu;
+	char answer = ' ';
+
+	do {
+
+		menu.print();
+
+		cin >> answer;
+		system("cls");
+
+		if (toupper(answer) == 'S')
+		{
+			cout << "Set up for new semester.";
+			cout << endl;
+			system("pause");
+			system("cls");
+		}
+		else if (toupper(answer) == 'A')
+		{
+			cout << "Add a student.";
+			cout << endl;
+			system("pause");
+			system("cls");
+		}
+		else if (toupper(answer) == 'P')
+		{
+			cout << "Record programming assignment grade for all students.";
+			cout << endl;
+			system("pause");
+			system("cls");
+		}
+		else if (toupper(answer) == 'T')
+		{
+			cout << "Record test grade for all students.";
+			cout << endl;
+			system("pause");
+			system("cls");
+		}
+		else if (toupper(answer) == 'F')
+		{
+			cout << "Record Final exam grade for all students.";
+			cout << endl;
+			system("pause");
+			system("cls");
+		}
+		else if (toupper(answer) == 'C')
+		{
+			cout << "Change a grade for a particular student.";
+			cout << endl;
+			system("pause");
+			system("cls");
+		}
+		else if (toupper(answer) == 'G')
+		{
+			cout << "Calculate final grade";
+			cout << endl;
+			system("pause");
+			system("cls");
+		}
+		else if (toupper(answer) == 'O')
+		{
+			cout << "Output the grade data";
+			cout << endl;
+			system("pause");
+			system("cls");
+		}
+
+	} while (toupper(answer) != 'Q');
+
+	system("pause");
+	return 0;
+}
 
 
