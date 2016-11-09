@@ -10,18 +10,20 @@
 #include "Student.h" 
 #include "Semester.h"
 #include "mainMenu.h"
+#include "openFile.h"
 #define _USE_MATH_DEFINES
 
 using namespace std;
 
-int openFile(ofstream& resultFile);
+
 
 
 int main() {
 	string option; // user's entered option will be saved in this variable
 	string addMoreStudent;
 	mainMenu menu;
-	
+	char answer = ' ';
+	openFile fileManger;
 
 	char lastName;
 	char firstName;
@@ -90,6 +92,8 @@ int main() {
 
 			//Continues to the Option menu
 			menu.print();
+			cin >> answer;
+			system("cls");
 
 		}
 
@@ -101,10 +105,13 @@ int main() {
 	{
 		//Open "grades.dat" file
 		//Llamar una funcion(validateSetup) para verficar si el semestre ya se definio
+		fileManger.input();
 		menu.print();
 	}
 
 	menu.print();
+	cin >> answer;
+	system("cls");
 
 	system("pause");
 	return 0;
