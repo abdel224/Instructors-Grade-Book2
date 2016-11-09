@@ -11,7 +11,6 @@
 #define _USE_MATH_DEFINES
 
 using namespace std;
-//comment 2 
 
 void addStudent();
 
