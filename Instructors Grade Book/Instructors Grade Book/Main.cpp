@@ -103,16 +103,13 @@ int main() {
 			cout << "Would you like to add the student grades now? (Y or N)";
 			cin >> addStudentGrade;
 
+			
+
 			//Adds the Student Grades to the Record
 			if (addStudentGrade == 'Y' || 'y' || 'yes')
 			{
-				cout << "Enter Student Programing Grade Percent:  (Example 80%)";
-				cin >> gradeProgrammingPercent;
-				cout << "Enter Student Test Grade Percent:  (Example 80%)";
-				cin >> gradeTestPercent;
-				cout << "Enter Student Final Grade Percent:  (Example 80%)";
-				cin >> gradeFinalTestPercent;
-
+				newStudent.studentGrades();
+				newStudent.computeStudentGrade();
 				//Print information in the record
 			}
 			else
