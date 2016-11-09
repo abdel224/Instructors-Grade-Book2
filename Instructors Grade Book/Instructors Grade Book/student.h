@@ -18,7 +18,7 @@ public:
 
 	Student();
 
-	void setStudent(string lastName, string firstName, int studentNumber);
+	void setStudent();
 
 	void studentGrades(float gradeProgrammingPercent,
 		float gradeTestPercent, float gradeFinalTestPercent);

@@ -8,6 +8,8 @@
 #include <cmath>
 //This is to create Student Object
 #include "Student.h" 
+#include "Semester.h"
+#include "mainMenu.h"
 #define _USE_MATH_DEFINES
 
 using namespace std;
@@ -46,7 +48,9 @@ int main() {
 	if (option == "Y" || option == "yes" || option == "y")
 	{
 		//Intialize "grades.dat" and grades data structure to empty state
-		semesterContent();
+		Semester newSemester;
+		//Creates New Semester
+		newSemester.setUpSemestre();
 
 		//Ask if it wants to add a student
 		cout << "Would you like to add a student now?" << endl;
@@ -92,7 +96,9 @@ int main() {
 			Student newStudent;
 			char addStudentGrade;
 
-			addStudent();
+			newStudent.setStudent();
+
+			//addStudent();
 
 			cout << "Would you like to add the student grades now? (Y or N)";
 			cin >> addStudentGrade;
@@ -213,7 +219,7 @@ int openFile(ofstream& resultFile)
 
 }
 
-void semesterContent()
+/*void semesterContent()
 {
 	int numPrograms = 0;
 	int weightPercentProgram = 0;
@@ -237,15 +243,10 @@ void semesterContent()
 	cin >> weightPercentFinalExams;
 
 
-}
+}*/
 
-#include <iostream>
-#include <string>
-#include <fstream>
-#include "mainMenu.h";
-using namespace std;
 
-int main2() {
+/*int main2() {
 	mainMenu menu;
 	char answer = ' ';
 
@@ -317,6 +318,6 @@ int main2() {
 
 	system("pause");
 	return 0;
-}
+}*/
 
 

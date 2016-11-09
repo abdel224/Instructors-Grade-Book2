@@ -14,7 +14,7 @@ Student::Student()
 
 }
 
-void Student::setStudent(string lastName, string firstName, int studentNumber)
+void Student::setStudent()
 {
 	string studentLastName;
 	string studentFirstName;
