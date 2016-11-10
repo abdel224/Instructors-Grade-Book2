@@ -11,6 +11,7 @@
 #include "Semester.h"
 #include "mainMenu.h"
 #include "openFile.h"
+#include "unsortedType.h"
 #define _USE_MATH_DEFINES
 
 using namespace std;
@@ -25,15 +26,7 @@ int main() {
 	char answer = ' ';
 	openFile fileManger;
 
-	char lastName;
-	char firstName;
-	int studentNumber;
-	float gradeProgrammingPercent;
-	float gradeTestPercent;
-	float gradeFinalTestPercent;
 	string menuOption = "";
-
-
 
 	cout << "***********************************" << endl;
 	cout << "Instructors Grade Book" << endl;
@@ -53,7 +46,6 @@ int main() {
 		newSemester.setUpSemestre();
 
 		//Ask if it wants to add a student
-
 		cout << "Would you like to add a student now?" << endl;
 		cin >> addMoreStudent;
 

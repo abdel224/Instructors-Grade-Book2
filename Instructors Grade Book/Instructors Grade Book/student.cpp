@@ -1,21 +1,21 @@
 #include "Student.h"
 #include <iostream>;
-#include "Semester.h"
+
 using namespace std;
 
 struct nodePrograms {
-	int dataPrograms;
+	float dataPrograms;
 	nodePrograms *next;
 };
 
 struct nodeTest {
-	int dataTest;
+	float dataTest;
 	nodeTest *next;
 };
 
 struct nodeFinalExam {
-	int dataFinalExam;
-	nodeTest *next;
+	float dataFinalExam;
+	nodeFinalExam *next;
 };
 
 Student::Student()

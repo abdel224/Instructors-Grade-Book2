@@ -1,9 +1,10 @@
 #pragma once
 #include<iostream>
 #include <string>
+#include "Semester.h"
 using namespace std;
 
-class Student
+class Student : public Semester
 {
 private:
 	string lastName;
