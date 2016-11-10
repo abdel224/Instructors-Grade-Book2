@@ -209,7 +209,14 @@ void Student::printStudentRecord()
 
 Student::~Student()
 {
-
+	lastName = "";
+	firstName = "";
+	studentNumber = 0;
+	gradeProgrammingPercent = 0;
+	gradeTestPercent = 0;
+	gradeFinalTestPercent = 0;
+	finalProgrammingGrade = 0;
+	finalTestGrade = 0;
 }
 
 

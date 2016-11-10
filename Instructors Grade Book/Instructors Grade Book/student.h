@@ -14,7 +14,7 @@ private:
 	float gradeFinalTestPercent;
 	float finalProgrammingGrade;
 	float finalTestGrade;
-	int studentTests[];
+	
 
 
 public:
