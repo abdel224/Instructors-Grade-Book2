@@ -16,6 +16,9 @@ public:
 	Semester();
 	void setUpSemestre();
 	void printSemester();
+	int getNumTest();
+	int getNumPrograms();
+	int getFinalExam();
 	~Semester();
 };
 

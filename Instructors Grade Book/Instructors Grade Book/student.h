@@ -14,6 +14,7 @@ private:
 	float gradeFinalTestPercent;
 	float finalProgrammingGrade;
 	float finalTestGrade;
+	int studentTests[];
 
 
 public:
@@ -22,7 +23,11 @@ public:
 
 	void setStudent();
 
-	void studentGrades();
+	void studentProgramsGrades();
+
+	void studentTestGrades();
+
+	void studentFinalExamGrade();
 
 	void computeStudentGrade();
 

@@ -1,4 +1,6 @@
 #include "mainMenu.h"
+#include <string>
+using namespace std;
 
 void mainMenu::print()
 {
@@ -13,4 +15,7 @@ void mainMenu::print()
 	cout << "(O)Output the grade data, ordered alphabetically by name (last name/first name) or by student number (in increasing order)." << endl;
 	cout << "(Q)Quit" << endl;
 	cout << "Which of the above do you wish to do, enter the letter:  ";
+	cin >> menuOption ;
+	this->menuOption = menuOption;
+	//return;
 }
