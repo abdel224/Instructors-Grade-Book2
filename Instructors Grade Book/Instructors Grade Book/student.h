@@ -1,13 +1,10 @@
 #pragma once
 #include<iostream>
 #include <string>
+#include "Semester.h"
 using namespace std;
 
-struct nodePrograms;
-struct nodeTest;
-struct nodeFinalExam;
-
-class Student
+class Student : public Semester
 {
 private:
 	string lastName;
@@ -18,6 +15,8 @@ private:
 	float gradeFinalTestPercent;
 	float finalProgrammingGrade;
 	float finalTestGrade;
+
+
 
 public:
 

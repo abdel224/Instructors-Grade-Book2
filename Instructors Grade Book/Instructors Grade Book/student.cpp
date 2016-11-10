@@ -1,21 +1,21 @@
 #include "Student.h"
 #include <iostream>;
-#include "Semester.h"
+
 using namespace std;
 
 struct nodePrograms {
-	int dataPrograms;
+	float dataPrograms;
 	nodePrograms *next;
 };
 
 struct nodeTest {
-	int dataTest;
+	float dataTest;
 	nodeTest *next;
 };
 
 struct nodeFinalExam {
-	int dataFinalExam;
-	nodeTest *next;
+	float dataFinalExam;
+	nodeFinalExam *next;
 };
 
 Student::Student()
@@ -71,7 +71,6 @@ void Student::studentProgramsGrades()
 	//This gets the numbers of programs define by the user and asign them to the new variables.
 	Semester numPrograms;
 	programs =  numPrograms.getNumPrograms();
-//	finalexam = FinalExamn.getFinalExam();
 
 	//Programing Grade Nodes
 	n = new nodePrograms;
@@ -193,7 +192,7 @@ void Student::printStudentRecord()
 
 Student::~Student()
 {
-
+	
 }
 
 
