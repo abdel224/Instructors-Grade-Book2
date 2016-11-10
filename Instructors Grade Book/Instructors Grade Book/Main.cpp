@@ -57,7 +57,6 @@ int main() {
 			char addStudentGrade;
 
 			//Setup the Student Information
-			newStudent.~Student();
 			newStudent.setStudent();
 
 			//Ask if the user want to add the student grade at the moment

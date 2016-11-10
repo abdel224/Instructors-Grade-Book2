@@ -44,14 +44,20 @@ void Semester::printSemester()
 	//Print information of the semester in the report
 }
 
-int Semester::getNumTest()
+int Semester::getNumTest() const
 {
 	return numTests;
 }
 
+
+int Semester::setNumTest(int numTests)
+{
+	numTests = numTests;
+}
+
 int Semester::getNumPrograms()
 {
-	return numPrograms;
+	return this->numPrograms = numPrograms;
 }
 
 int Semester::getFinalExam()

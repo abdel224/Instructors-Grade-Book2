@@ -71,7 +71,6 @@ void Student::studentProgramsGrades()
 	//This gets the numbers of programs define by the user and asign them to the new variables.
 	Semester numPrograms;
 	programs =  numPrograms.getNumPrograms();
-//	finalexam = FinalExamn.getFinalExam();
 
 	//Programing Grade Nodes
 	n = new nodePrograms;
@@ -209,14 +208,7 @@ void Student::printStudentRecord()
 
 Student::~Student()
 {
-	lastName = "";
-	firstName = "";
-	studentNumber = 0;
-	gradeProgrammingPercent = 0;
-	gradeTestPercent = 0;
-	gradeFinalTestPercent = 0;
-	finalProgrammingGrade = 0;
-	finalTestGrade = 0;
+	
 }
 
 
