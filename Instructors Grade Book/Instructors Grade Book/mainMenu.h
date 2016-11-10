@@ -7,6 +7,9 @@ using namespace std;
 #define mainMenu_H
 class mainMenu
 {
+private:
+	string menuOption;
+
 public:
 
 	void print();

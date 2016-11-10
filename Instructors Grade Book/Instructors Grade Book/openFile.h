@@ -8,10 +8,10 @@ class openFile
 public:
 	openFile();
 	~openFile();
+	void input();
 	void output();
 	
 private:
 	ifstream inputFile;	
 	ofstream outputFile;
 };
-

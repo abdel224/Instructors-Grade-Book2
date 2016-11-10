@@ -44,8 +44,20 @@ void Semester::printSemester()
 	//Print information of the semester in the report
 }
 
+int Semester::getNumTest()
+{
+	return numTests;
+}
 
+int Semester::getNumPrograms()
+{
+	return numPrograms;
+}
 
+int Semester::getFinalExam()
+{
+	return numFinalExams;
+}
 
 Semester::~Semester()
 {
