@@ -4,12 +4,17 @@
 
 openFile::openFile()
 {
-	inputFile.open("grades.txt");
+	
 }
 
 
 openFile::~openFile()
 {
+}
+
+void openFile::input()
+{
+	inputFile.open("grades.txt");
 }
 
 void openFile::output()
