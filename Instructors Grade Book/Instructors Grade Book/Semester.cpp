@@ -44,21 +44,37 @@ void Semester::printSemester()
 	//Print information of the semester in the report
 }
 
-int Semester::getNumTest()
+int Semester::getNumTest() const
 {
 	return numTests;
 }
 
-int Semester::getNumPrograms()
+int Semester::getNumPrograms() const
 {
 	return numPrograms;
 }
 
-int Semester::getFinalExam()
+int Semester::getFinalExam() const
 {
 	return numFinalExams;
 }
 
+void Semester::setNumTest(int newNumTest)
+{
+	numTests = newNumTest;
+}
+
+void Semester::setNumPrograms(int newNumProgram)
+{
+	numPrograms = newNumProgram;
+}
+
+void Semester::setFinalExam(int newNumFinalExam)
+{
+	numFinalExams = newNumFinalExam;
+}
+
 Semester::~Semester()
 {
+
 }

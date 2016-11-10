@@ -16,8 +16,13 @@ public:
 	Semester();
 	void setUpSemestre();
 	void printSemester();
-	int getNumTest();
-	int getNumPrograms();
-	int getFinalExam();
+	int getNumTest() const;
+	int getNumPrograms() const;
+	int getFinalExam()const;
+
+	void setNumTest(int);
+	void setNumPrograms(int);
+	void setFinalExam(int);
+	
 	~Semester();
 };
