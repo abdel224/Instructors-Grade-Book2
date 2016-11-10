@@ -50,6 +50,7 @@ int main() {
 		newSemester.setUpSemestre();
 
 		//Ask if it wants to add a student
+
 		cout << "Would you like to add a student now?" << endl;
 		cin >> addMoreStudent;
 
