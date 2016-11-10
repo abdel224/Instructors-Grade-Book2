@@ -3,6 +3,10 @@
 #include <string>
 using namespace std;
 
+struct nodePrograms;
+struct nodeTest;
+struct nodeFinalExam;
+
 class Student
 {
 private:
@@ -14,8 +18,6 @@ private:
 	float gradeFinalTestPercent;
 	float finalProgrammingGrade;
 	float finalTestGrade;
-	int studentTests[];
-
 
 public:
 

@@ -98,21 +98,6 @@ void Student::studentProgramsGrades()
 	t->next = n;
 	n->next = NULL;
 
-
-
-
-
-	cout << "Enter Student Test Grade Percent(Example 80%):  " << endl;
-	cin >> gradeTestPercent;
-
-	//un for loop d nodo
-
-	cout << "Enter Student Final Grade Percent(Example 80%):  " << endl;
-	cin >> gradeFinalTestPercent;
-
-	this->gradeProgrammingPercent = gradeProgrammingPercent;
-	this->gradeTestPercent = gradeTestPercent;
-	this->gradeFinalTestPercent = gradeFinalTestPercent;
 }
 
 void Student::studentTestGrades()
@@ -205,7 +190,6 @@ void Student::printStudentRecord()
 {
 	//Prints the Student record
 }
-
 
 Student::~Student()
 {

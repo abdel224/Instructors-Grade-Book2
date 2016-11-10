@@ -20,7 +20,7 @@ using namespace std;
 
 int main() {
 	string option; // user's entered option will be saved in this variable
-	string addMoreStudent;
+	string addStudent;
 	mainMenu menu;
 	char answer = ' ';
 	openFile fileManger;
@@ -54,10 +54,10 @@ int main() {
 
 		//Ask if it wants to add a student
 		cout << "Would you like to add a student now?" << endl;
-		cin >> addMoreStudent;
+		cin >> addStudent;
 
 
-		if (addMoreStudent == "Y" || addMoreStudent == "yes" || addMoreStudent == "y")
+		if (addStudent == "Y" || addStudent == "yes" || addStudent == "y")
 		{
 			//Creates the Student
 			Student newStudent;
@@ -82,6 +82,10 @@ int main() {
 			}
 			else
 			{
+				cout << "Would you like to add another student now? (Y or N)";
+				cin >> addStudent;
+				//Add loop
+
 				//Print the information in the record
 				newStudent.printStudentRecord();
 			}

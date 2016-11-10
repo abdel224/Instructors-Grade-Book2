@@ -51,7 +51,8 @@ int Semester::getNumTest()
 
 int Semester::getNumPrograms()
 {
-	return numPrograms;
+	int programs = numPrograms;
+	return programs;
 }
 
 int Semester::getFinalExam()
