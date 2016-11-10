@@ -31,9 +31,9 @@ int main() {
 	float gradeProgrammingPercent;
 	float gradeTestPercent;
 	float gradeFinalTestPercent;
+	string menuOption = "";
 
 
-	string menuOption;
 
 	cout << "***********************************" << endl;
 	cout << "Instructors Grade Book" << endl;
@@ -47,8 +47,9 @@ int main() {
 	if (option == "Y" || option == "yes" || option == "y")
 	{
 		//Intialize "grades.dat" and grades data structure to empty state
-		Semester newSemester;
+		
 		//Creates New Semester
+		Semester newSemester;
 		newSemester.setUpSemestre();
 
 		//Ask if it wants to add a student
@@ -58,42 +59,41 @@ int main() {
 
 		if (addMoreStudent == "Y" || addMoreStudent == "yes" || addMoreStudent == "y")
 		{
-			//Creates the Student information Record
+			//Creates the Student
 			Student newStudent;
 			char addStudentGrade;
 
+			//Setup the Student Information
 			newStudent.setStudent();
 
-			//addStudent();
-
+			//Ask if the user want to add the student grade at the moment
 			cout << "Would you like to add the student grades now? (Y or N)";
 			cin >> addStudentGrade;
 
-			
-
-			//Adds the Student Grades to the Record
+			//Add the Student Grades
 			if (addStudentGrade == 'Y' || 'y' || 'yes')
 			{
-				newStudent.studentGrades();
+				newStudent.studentProgramsGrades();
+				newStudent.studentTestGrades();
+				newStudent.studentFinalExamGrade();
 				newStudent.computeStudentGrade();
 				//Print information in the record
+				newStudent.printStudentRecord();
 			}
 			else
 			{
 				//Print the information in the record
+				newStudent.printStudentRecord();
 			}
 
 		}
 		else
 		{
-
+			
 			//Continues to the Option menu
-			menu.print();
-			cin >> answer;
-			system("cls");
-
+			
 		}
-
+		menu.print();
 		//añadir preguntas para saber si se quiere añadir mas estudiantes
 		//dependiendo contestacion sale o se queda en loop
 	}
