@@ -3,16 +3,12 @@
 #include <iostream>
 #include <string>
 #include <fstream>
-#include <iomanip>
-#include <vector>
-#include <cmath>
 //This is to create Student Object
 #include "Student.h" 
 #include "Semester.h"
 #include "mainMenu.h"
 #include "openFile.h"
 #include "unsortedType.h"
-#define _USE_MATH_DEFINES
 
 using namespace std;
 
@@ -25,8 +21,6 @@ int main() {
 	mainMenu menu;
 	char answer = ' ';
 	openFile fileManger;
-
-	string menuOption = "";
 
 	cout << "***********************************" << endl;
 	cout << "Instructors Grade Book" << endl;
@@ -122,7 +116,7 @@ int main() {
 
 		if (toupper(answer) == 'S')
 		{
-			cout << "Set up for new semester.";
+			
 			cout << endl;
 			system("pause");
 			system("cls");

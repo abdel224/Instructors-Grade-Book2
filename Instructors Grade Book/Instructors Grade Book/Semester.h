@@ -5,11 +5,11 @@ class Semester
 {
 private:
 	int numPrograms;
-	float weightPercentProgram;
+	int weightPercentProgram;
 	int numTests;
-	float weightPercentTests;
+	int weightPercentTests;
 	int numFinalExams;
-	float weightPercentFinalExams;
+	int weightPercentFinalExams;
 
 
 public:
@@ -17,9 +17,12 @@ public:
 	void setUpSemestre();
 	void printSemester();
 	int getNumTest() const;
-	int setNumTest();
-	int setNumTest(int numTests);
-	int getNumPrograms();
-	int getFinalExam();
+	int getNumPrograms() const;
+	int getFinalExam()const;
+
+	void setNumTest(int);
+	void setNumPrograms(int);
+	void setFinalExam(int);
+	
 	~Semester();
 };

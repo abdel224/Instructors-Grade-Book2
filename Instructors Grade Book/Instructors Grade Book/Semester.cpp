@@ -49,22 +49,32 @@ int Semester::getNumTest() const
 	return numTests;
 }
 
-
-int Semester::setNumTest(int numTests)
+int Semester::getNumPrograms() const
 {
-	numTests = numTests;
+	return numPrograms;
 }
 
-int Semester::getNumPrograms()
-{
-	return this->numPrograms = numPrograms;
-}
-
-int Semester::getFinalExam()
+int Semester::getFinalExam() const
 {
 	return numFinalExams;
 }
 
+void Semester::setNumTest(int newNumTest)
+{
+	numTests = newNumTest;
+}
+
+void Semester::setNumPrograms(int newNumProgram)
+{
+	numPrograms = newNumProgram;
+}
+
+void Semester::setFinalExam(int newNumFinalExam)
+{
+	numFinalExams = newNumFinalExam;
+}
+
 Semester::~Semester()
 {
+
 }
