@@ -18,17 +18,17 @@ Semester::Semester()
 void Semester::setUpSemestre()
 {
 	//Define the semester content
-	cout << "How many programming assignments(range 0-6)?" << endl;
+	cout << "How many programming assignments(range 0-6)?: ";
 	cin >> numPrograms;
-	cout << "What is the relative weight of the programs? " << endl;
+	cout << "What is the relative weight of the programs?: ";
 	cin >> weightPercentProgram;
-	cout << "How many numbers of tests(range 0-4)?" << endl;
+	cout << "How many numbers of tests(range 0-4)?: ";
 	cin >> numTests;
-	cout << "What is the relative weight of the tests? " << endl;
+	cout << "What is the relative weight of the tests?: ";
 	cin >> weightPercentTests;
-	cout << "Will there be final exams(If yes enter 1 if not enter 0)?" << endl;
+	cout << "Will there be final exams(If yes enter 1 if not enter 0): ";
 	cin >> numFinalExams;
-	cout << "What is the relative weight of the final exam? " << endl;
+	cout << "What is the relative weight of the final exam?: ";
 	cin >> weightPercentFinalExams;
 
 /*	this->numPrograms = numPrograms;

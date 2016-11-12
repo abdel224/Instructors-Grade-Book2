@@ -9,7 +9,7 @@
 #include "StudentLinkedList.h"
 #include "mainMenu.h"
 #include "openFile.h"
-#include "unsortedType.h"
+
 
 using namespace std;
 
@@ -42,15 +42,15 @@ int main() {
 		newSemester.setUpSemestre();
 
 		//Ask if it wants to add a student
-		cout << "Would you like to add a student now?" << endl;
+		cout << "Would you like to add a student now?: ";
 		cin >> addStudent;
 
 
-		if (addStudent == "Y" || addStudent == "yes" || addStudent == "y")
+		if (addStudent == "Y" || addStudent == "yes" || addStudent == "y" || addStudent == "Yes")
 		{
 			//Creates the Student
 			Student newStudent;
-			char addStudentGrade;
+			string addStudentGrade;
 
 			//Setup the Student Information
 			newStudent.setStudent();
@@ -60,7 +60,7 @@ int main() {
 			cin >> addStudentGrade;
 
 			//Add the Student Grades
-			if (addStudentGrade == 'Y' || 'y' || 'yes')
+			if (addStudentGrade == "Y" || addStudentGrade == "yes" || addStudentGrade == "y" || addStudentGrade == "Yes")
 			{
 				newStudent.studentProgramsGrades();
 				newStudent.studentTestGrades();

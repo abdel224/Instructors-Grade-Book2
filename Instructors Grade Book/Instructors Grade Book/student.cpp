@@ -41,11 +41,11 @@ void Student::setStudent()
 	int studentNumbers = 0;
 	string addMoreStudent;
 
-	cout << "Enter the Student Last Name:" << endl;
+	cout << "Enter the Student Last Name: ";
 	cin >> studentLastName;
 	cout << "Enter the Student First Name: ";
 	cin >> studentFirstName;
-	cout << "What is the student number(1-9999)" << endl;
+	cout << "What is the student number(1-9999): ";
 	cin >> studentNumbers;
 
 
@@ -74,7 +74,7 @@ void Student::studentProgramsGrades()
 
 	//Programing Grade Nodes
 	n = new nodePrograms;
-	cout << "Enter Student Programing Grade Percent(Example 80%):  " << endl;
+	cout << "Enter Student Programing Grade Percent(Example 80%): ";
 	cin >> gradeProgrammingPercent;
 	n->dataPrograms = gradeProgrammingPercent;
 	n->next = NULL;
@@ -84,7 +84,7 @@ void Student::studentProgramsGrades()
 	for (size = programs; i < size - 1; i++)
 	{
 		n = new nodePrograms;
-		cout << "Enter next Student Programing Grade Percent(Example 80%):  " << endl;
+		cout << "Enter next Student Programing Grade Percent(Example 80%): ";
 		cin >> gradeProgrammingPercent;
 		n->dataPrograms = gradeProgrammingPercent;
 		tail->next = n;
@@ -92,7 +92,7 @@ void Student::studentProgramsGrades()
 	}
 
 	n = new nodePrograms;
-	cout << "Enter the last Student Programing Grade Percent(Example 80%):  : " << endl;
+	cout << "Enter the last Student Programing Grade Percent(Example 80%): ";
 	cin >> gradeProgrammingPercent;
 	n->dataPrograms = gradeProgrammingPercent;
 	tail->next = n;
@@ -126,7 +126,7 @@ void Student::studentTestGrades()
 
 	//Test Grade Nodes
 	n = new nodeTest;
-	cout << "Enter Student First Test Grade Percent(Example 80%):  " << endl;
+	cout << "Enter Student First Test Grade Percent(Example 80%): ";
 	cin >> gradeProgrammingPercent;
 	n->dataTest = gradeTestPercent;
 	t = n;
@@ -135,7 +135,7 @@ void Student::studentTestGrades()
 	for (size = tests; i < size - 1; i++)
 	{
 		n = new nodeTest;
-		cout << "Enter next Student Test Grade Percent(Example 80%):  " << endl;
+		cout << "Enter next Student Test Grade Percent(Example 80%): ";
 		cin >> gradeProgrammingPercent;
 		n->dataTest = gradeTestPercent;
 		t->next = n;
@@ -143,7 +143,7 @@ void Student::studentTestGrades()
 	}
 
 	n = new nodeTest;
-	cout << "Enter the last Student Test Grade Percent(Example 80%):  : " << endl;
+	cout << "Enter the last Student Test Grade Percent(Example 80%): ";
 	cin >> gradeProgrammingPercent;
 	n->dataTest = gradeTestPercent;
 	t->next = n;
@@ -170,7 +170,7 @@ void Student::studentFinalExamGrade()
 		//Programing Grade Nodes
 		n = new nodeFinalExam;
 		//n = new nodeFinalExam;
-		cout << "Enter the Student Final Exam Grade Percent(Example 80%):  " << endl;
+		cout << "Enter the Student Final Exam Grade Percent(Example 80%): ";
 		cin >> gradeProgrammingPercent;
 		n->dataFinalExam = finalexam;
 		t = n;
@@ -191,7 +191,7 @@ void Student::computeStudentGrade()
 	finalTestGrade = gradeTestPercent * 2;
 }
 
-void Student::printStudentRecord(nodePrograms *head)
+void Student::printStudentRecord()
 {
 	while (head != NULL)
 	{

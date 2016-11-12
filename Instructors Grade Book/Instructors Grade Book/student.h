@@ -42,7 +42,7 @@ public:
 	void studentTestGrades();
 	void studentFinalExamGrade();
 	void computeStudentGrade();
-	void printStudentRecord(nodePrograms *head);
+	void printStudentRecord();
 
 	~Student();
 };
