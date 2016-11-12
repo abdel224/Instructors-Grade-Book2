@@ -31,12 +31,12 @@ void Semester::setUpSemestre()
 	cout << "What is the relative weight of the final exam? " << endl;
 	cin >> weightPercentFinalExams;
 
-	this->numPrograms = numPrograms;
+/*	this->numPrograms = numPrograms;
 	this->weightPercentProgram = weightPercentProgram;
 	this->numTests = numTests;
 	this->weightPercentTests = weightPercentTests;
 	this->numFinalExams = numFinalExams;
-	this->weightPercentFinalExams = weightPercentFinalExams;
+	this->weightPercentFinalExams = weightPercentFinalExams;*/
 }
 
 void Semester::printSemester()
@@ -51,8 +51,7 @@ int Semester::getNumTest() const
 
 int Semester::getNumPrograms() const
 {
-	int programs = numPrograms;
-	return programs;
+	return numPrograms;
 }
 
 int Semester::getFinalExam() const

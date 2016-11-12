@@ -4,6 +4,21 @@
 #include "Semester.h"
 using namespace std;
 
+struct nodePrograms {
+	float dataPrograms;
+	nodePrograms *next;
+};
+
+struct nodeTest {
+	float dataTest;
+	nodeTest *next;
+};
+
+struct nodeFinalExam {
+	float dataFinalExam;
+	nodeFinalExam *next;
+};
+
 class Student : public Semester
 {
 private:
@@ -15,24 +30,19 @@ private:
 	float gradeFinalTestPercent;
 	float finalProgrammingGrade;
 	float finalTestGrade;
-	int studentTests[];
+	nodePrograms *head;
 
 
 public:
 
 	Student();
-
+	bool isEmpty(nodePrograms * head);
 	void setStudent();
-
 	void studentProgramsGrades();
-
 	void studentTestGrades();
-
 	void studentFinalExamGrade();
-
 	void computeStudentGrade();
-
-	void printStudentRecord();
+	void printStudentRecord(nodePrograms *head);
 
 	~Student();
 };

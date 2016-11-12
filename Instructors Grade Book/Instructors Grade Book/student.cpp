@@ -1,22 +1,10 @@
 #include "Student.h"
+#include "Semester.h"
 #include <iostream>;
 
 using namespace std;
 
-struct nodePrograms {
-	float dataPrograms;
-	nodePrograms *next;
-};
 
-struct nodeTest {
-	float dataTest;
-	nodeTest *next;
-};
-
-struct nodeFinalExam {
-	float dataFinalExam;
-	nodeFinalExam *next;
-};
 
 Student::Student()
 {
@@ -32,6 +20,18 @@ Student::Student()
 	Semester numPrograms;
 	Semester FinalExamn;
 
+}
+
+bool Student::isEmpty(nodePrograms *head)
+{
+	if (head == NULL)
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
 }
 
 void Student::setStudent()
@@ -60,9 +60,9 @@ void Student::studentProgramsGrades()
 	//New Node
 	nodePrograms *n;
 	//Pointer to the New Node
-	nodePrograms *t;
+	nodePrograms *tail;
 	//Header of the Node
-	nodePrograms *h;
+	//nodePrograms *head;
 	//Controls the loop
 	int size;
 	int i = 0;
@@ -77,8 +77,9 @@ void Student::studentProgramsGrades()
 	cout << "Enter Student Programing Grade Percent(Example 80%):  " << endl;
 	cin >> gradeProgrammingPercent;
 	n->dataPrograms = gradeProgrammingPercent;
-	t = n;
-	h = n;
+	n->next = NULL;
+	tail = n;
+	head = n;
 
 	for (size = programs; i < size - 1; i++)
 	{
@@ -86,17 +87,22 @@ void Student::studentProgramsGrades()
 		cout << "Enter next Student Programing Grade Percent(Example 80%):  " << endl;
 		cin >> gradeProgrammingPercent;
 		n->dataPrograms = gradeProgrammingPercent;
-		t->next = n;
-		t = t->next;
+		tail->next = n;
+		tail = tail->next;
 	}
 
 	n = new nodePrograms;
 	cout << "Enter the last Student Programing Grade Percent(Example 80%):  : " << endl;
 	cin >> gradeProgrammingPercent;
 	n->dataPrograms = gradeProgrammingPercent;
-	t->next = n;
+	tail->next = n;
 	n->next = NULL;
 
+	while (head != NULL)
+	{
+		cout << head->dataPrograms << endl;
+		head = head->next;
+	}
 }
 
 void Student::studentTestGrades()
@@ -120,7 +126,7 @@ void Student::studentTestGrades()
 
 	//Test Grade Nodes
 	n = new nodeTest;
-	cout << "Enter Student Programing Grade Percent(Example 80%):  " << endl;
+	cout << "Enter Student First Test Grade Percent(Example 80%):  " << endl;
 	cin >> gradeProgrammingPercent;
 	n->dataTest = gradeTestPercent;
 	t = n;
@@ -129,7 +135,7 @@ void Student::studentTestGrades()
 	for (size = tests; i < size - 1; i++)
 	{
 		n = new nodeTest;
-		cout << "Enter next Student Programing Grade Percent(Example 80%):  " << endl;
+		cout << "Enter next Student Test Grade Percent(Example 80%):  " << endl;
 		cin >> gradeProgrammingPercent;
 		n->dataTest = gradeTestPercent;
 		t->next = n;
@@ -137,7 +143,7 @@ void Student::studentTestGrades()
 	}
 
 	n = new nodeTest;
-	cout << "Enter the last Student Programing Grade Percent(Example 80%):  : " << endl;
+	cout << "Enter the last Student Test Grade Percent(Example 80%):  : " << endl;
 	cin >> gradeProgrammingPercent;
 	n->dataTest = gradeTestPercent;
 	t->next = n;
@@ -185,9 +191,27 @@ void Student::computeStudentGrade()
 	finalTestGrade = gradeTestPercent * 2;
 }
 
-void Student::printStudentRecord()
+void Student::printStudentRecord(nodePrograms *head)
 {
-	//Prints the Student record
+	while (head != NULL)
+	{
+		cout << head->dataPrograms << endl;
+		head = head->next;
+	}
+	
+	if (isEmpty(head))
+	{
+		cout << "There is no Grades to show" << endl;
+	}
+	else
+	{
+		cout << "The gardes are: \n" << endl;
+		while (head != NULL)
+		{
+			cout << head->dataPrograms << endl;
+			head = head->next;
+		}
+	}
 }
 
 Student::~Student()

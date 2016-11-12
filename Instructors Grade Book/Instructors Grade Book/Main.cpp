@@ -6,6 +6,7 @@
 //This is to create Student Object
 #include "Student.h" 
 #include "Semester.h"
+#include "StudentLinkedList.h"
 #include "mainMenu.h"
 #include "openFile.h"
 #include "unsortedType.h"
@@ -21,6 +22,7 @@ int main() {
 	mainMenu menu;
 	char answer = ' ';
 	openFile fileManger;
+	
 
 	cout << "***********************************" << endl;
 	cout << "Instructors Grade Book" << endl;
@@ -65,7 +67,7 @@ int main() {
 				newStudent.studentFinalExamGrade();
 				newStudent.computeStudentGrade();
 				//Print information in the record
-				newStudent.printStudentRecord();
+//				newStudent.printStudentRecord(head);
 			}
 			else
 			{
